@@ -10,6 +10,29 @@
 	  gtag('js', new Date());
 
 	  gtag('config', 'UA-138212041-1');
+
+	/**
+	 * Determine the mobile operating system.
+	 * This function returns one of 'iOS', 'Android', 'Windows Phone', or 'unknown'.
+	 *
+	 * @returns {String}
+	 */
+	function getMobileOperatingSystem() {
+	    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+	    if (/android/i.test(userAgent)) {
+		window.location.href = "https://play.google.com/store/apps/details?id=com.projectqm"
+		return "Android";
+	    }
+
+	    // iOS detection from: http://stackoverflow.com/a/9039885/177710
+	    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+		window.location.href = "https://itunes.apple.com/qa/app/qatar-movies/id1448286436"
+		return "iOS";
+	    }
+
+	}
+		
 	</script>
 
 	<!-- Mobile Specific Meta -->
@@ -25,9 +48,9 @@
 	<!-- meta character set -->
 	<meta charset="UTF-8">
 	<!-- Site Title -->
-	<title>Qatar Movies - Find and book tickets for Avengers Endgame and other movie showtimes in Qatar</title>
+	<title>Qatar Movies - Movie showtimes and tickets booking in Qatar</title>
 
-	<meta name="description" content="Find and book tickets for Avengers Endgame and other movie showtimes in Qatar through a simple UI">
+	<meta name="description" content="Movie showtimes and tickets booking in Qatar through a simple UI">
 
 	<link href="https://fonts.googleapis.com/css?family=Poppins:400,600|Roboto:400,400i,500" rel="stylesheet">
 	<!--
