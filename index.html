@@ -13,11 +13,8 @@
 
 	/**
 	 * Determine the mobile operating system.
-	 * This function returns one of 'iOS', 'Android', 'Windows Phone', or 'unknown'.
-	 *
-	 * @returns {String}
+	 * Then redirect accordingly
 	 */
-	function getMobileOperatingSystem() {
 	    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
 	    if (/android/i.test(userAgent)) {
@@ -30,8 +27,6 @@
 		window.location.href = "https://itunes.apple.com/qa/app/qatar-movies/id1448286436"
 		return "iOS";
 	    }
-
-	}
 		
 	</script>
 
